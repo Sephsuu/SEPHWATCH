@@ -1,0 +1,72 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block content %}
+
+{% include "components/navbar.html" %}
+<div class="background_bg">
+   <!-- contact section start -->
+   <div class="contact_section mt-4">
+      <div class="container">
+      <h1 class="watchs_taital">Signup to Sephwatch</h1>
+      </div>
+      <div class="contact_section_2">
+      <div class="container-fluid">
+         <div class="row">
+            <div class="col-md-6">
+            <form class="mail_section_1">
+               <input type="email" class="mail_text" placeholder="E-mail Address" name="Your Name">
+               <input type="password" class="mail_text" placeholder="Password" name="Phone Number">
+               <input type="password" class="mail_text" placeholder="Re-type Password" name="Phone Number">
+               <!-- <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="Massage"></textarea> -->
+               <div class="row">
+                  <div class="send_bt col-md-5"><a href="#">SIGNUP</a></div>
+                  <div class="col-md-7 sign_btn">To login, <a style="cursor: pointer;" href="{% url 'login' %}">Click Here!</a></div>
+               </div>
+            </form>
+            </div>
+            <div class="col-md-6 padding_right_0">
+               <div class="map_section"><img src="{% static 'images/map-img.png' %}"></div>
+            </div>
+         </div>
+      </div>
+      </div>
+   </div>
+   <!-- contact section end -->
+</div>
+<!-- background bg end -->
+<!-- footer section start -->
+<div class="footer_section layout_padding">
+   <div class="container">
+      <h3 class="follow_text">Follow Now</h3>
+      <div class="social_icon">
+         <ul>
+            <li><a href="#"><img src="images/fb-icon.png"></a></li>
+            <li><a href="#"><img src="images/twitter-icon.png"></a></li>
+            <li><a href="#"><img src="images/linkedin-icon.png"></a></li>
+            <li><a href="#"><img src="images/instagram-icon.png"></a></li>
+            <li><a href="#"><img src="images/youtub-icon.png"></a></li>
+         </ul>
+      </div>
+      <div class="location_main">
+         <div class="location_left">
+            <div class="call_text"><a href="#"><img src="images/map-icon.png"><span class="call_padding">Location</span></a></div>
+         </div>
+         <div class="location_middle">
+            <div class="call_text"><a href="#"><img src="images/mail-icon.png"><span class="call_padding">demo@gmail.com</span></a></div>
+         </div>
+         <div class="location_right">
+            <div class="call_text"><a href="#"><img src="images/call-icon.png"><span class="call_padding">Call +01 1234567890</span></a></div>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- footer section end -->
+<!-- copyright section start -->
+<div class="copyright_section">
+   <div class="container">
+      <p class="copyright_text">2020 All Rights Reserved. Design by <a href="https://html.design">Free html  Templates</a> Distribution by <a href="https://themewagon.com">ThemeWagon</a></p>
+   </div>
+</div>
+
+{% endblock content %}

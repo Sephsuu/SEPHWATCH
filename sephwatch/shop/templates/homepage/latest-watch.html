@@ -1,0 +1,38 @@
+{% load static %}
+<div class="watchs_section layout_padding">
+    <div class="container">
+       <h1 class="watchs_taital">Latest Watchs</h1>
+       {% for watch in latest_watchs %}
+          {% if forloop.counter|divisibleby:2 %}
+             <div class="watchs_section_2">
+                <div class="row">
+                   <div class="col-md-6">
+                      <div class="d-flex justify-content-center"><img src="{{ watch.image.url }}" class="img-fluid" width="320px"></div>
+                   </div>
+                   <div class="col-md-6">
+                      <h4 class="uni_text"><span style="color:#d5707f;">{{ watch.brand }}</span> {{ watch.model }}</h4>
+                      <p class="watchs_text">{{ watch.description }}</p>
+                      <h4 class="rate_text"><span style="color: #b60213;">₱</span> {{ watch.price }}</h4>
+                      <div class="read_bt1"><a href="#">Buy Now</a></div>
+                   </div>
+                </div>
+             </div>
+          {% else %}
+             <div class="watchs_section_3">
+                <div class="row">
+                   <div class="col-md-6">
+                      <h4 class="uni_text"><span style="color:rgb(216, 184, 0);">{{ watch.brand }}</span> {{ watch.model }}</h4>
+                      <p class="watchs_text">{{ watch.description }}</p>
+                      <h4 class="rate_text"><span style="color: #b60213;">₱</span> {{ watch.price }}</h4>
+                      <div class="read_bt1"><a href="#">Buy Now</a></div>
+                   </div>
+                   <div class="col-md-6">
+                      <div class="d-flex justify-content-center"><img src="{{ watch.image.url }}" class="img-fluid" width="320px"></div>
+                   </div>
+                </div>
+             </div>
+          {% endif %}
+       {% endfor %}
+       <div class="seemore_bt"><a href="#">See More</a></div>
+    </div>
+ </div>
